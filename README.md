@@ -6,4 +6,4 @@ A browser based aim trainer. Shoot the circles to score points and avoid hitting
 - Left click to start and shoot
 - Right click to restart after game over
 
-## [Start Training](https://r414.github.io/Aim-Trainer-V1/)
+## [Start Training](https://xyntrax.github.io/Aim-Trainer-V1/)
