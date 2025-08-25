@@ -92,7 +92,7 @@
     const TARGET_COUNT = 20;
     const EXTRA_CIRCLES = 3;
 
-    // Spawn positions (front 180°)
+    // Spawn positions (front 180)
     function randomPosition(){
       const dist = 6 + Math.random() * 4; 
       const angle = (Math.random() * Math.PI) - Math.PI/2; // -90°..+90°
@@ -148,7 +148,7 @@
       targets = targets.filter(o=>o!==obj);
     }
 
-    // Pointer lock (start only; no restart here)
+    // Pointer lock (start only no restart here)
     let controlsEnabled = false;
     document.body.addEventListener("click", ()=>{
       if(!controlsEnabled && hp>0) renderer.domElement.requestPointerLock();
@@ -158,7 +158,7 @@
       instructions.style.display = controlsEnabled ? "none" : "block";
     });
 
-    // Disable default context menu so right-click can be used for restart
+    // Disable default context menu so right click can be used for restart
     document.addEventListener("contextmenu", e => e.preventDefault());
 
     // Mouse look
@@ -171,7 +171,7 @@
       camera.rotation.set(pitch, yaw, 0, "YXZ");
     });
 
-    // Shooting + right-click restart
+    // Shooting + right click restart
     const raycaster = new THREE.Raycaster();
     document.addEventListener("mousedown", e=>{
       if(hp<=0 && e.button===2){ // right click when dead -> restart
@@ -248,3 +248,4 @@
   </script>
 </body>
 </html>
+
